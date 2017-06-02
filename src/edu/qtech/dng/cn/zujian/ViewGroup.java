@@ -42,5 +42,11 @@ public class ViewGroup extends View {
    	 System.out.println("我是"+this.name+"，我返回了一个子构件:"+i);
         return viewList.get(i);
     }
+    @Override
+    public ViewGroup clone(){
+    	ViewGroup vG = null;
+    	vG = (ViewGroup) super.clone();
+    	return vG;
+    }
 } 
 
