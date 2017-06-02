@@ -12,7 +12,11 @@ public class FaceProduct extends Builder {
 		System.out.println("创建一个小丑脸...");
 		faceGraph = new ViewGroup("小丑脸");
 	}
-	
+	public  FaceProduct(String s) {
+		// TODO Auto-generated constructor stub
+		System.out.println("创建一个小丑脸...:"+s);
+		faceGraph = new ViewGroup("小丑脸 "+s);
+	}
 	@Override
 	public void setPart(View v) {
 		// TODO Auto-generated method stub

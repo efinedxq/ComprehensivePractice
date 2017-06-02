@@ -12,8 +12,11 @@ public class Director {
     private Builder builder;
     //特定建造者
     private Builder fBuilder;
+    private Builder nfBuilder;
+    
     public Director(){
-    	fBuilder = new FaceProduct();
+    	fBuilder = new FaceProduct("1");
+    	nfBuilder = new FaceProduct("2");
     }
     public Director(Builder b){
     	this.builder = b;
@@ -30,5 +33,12 @@ public class Director {
     	fBuilder.setPart(new Line("线段"));
     	fBuilder.setPart(new Arcircle("圆弧"));
     	return fBuilder.buildProduct();
+    }
+    //创建有名字的画
+    public ViewGroup getNamedFaceProduct(View v){
+    	nfBuilder.setPart(v);
+    	nfBuilder.setPart(new Line("线段"));
+    	nfBuilder.setPart(new Arcircle("圆弧"));
+    	return nfBuilder.buildProduct();
     }
 }

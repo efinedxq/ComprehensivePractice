@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ViewGroup extends View {
-	 
+    //图画属性
     private List<View> viewList = new ArrayList<View>();
-    
+   
     public ViewGroup(){
     	this.name = "容器";
     }
@@ -25,8 +25,8 @@ public class ViewGroup extends View {
     }
     
     public List<View> getChildren(){
-   	 System.out.println("我是"+this.name+"，我返回了所有的构件...");
-   	 return this.viewList;
+   	  System.out.println("我是"+this.name+"，我返回了所有的构件...");
+   	  return this.viewList;
     }
     
     public View getChild(int i){
